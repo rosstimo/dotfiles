@@ -1,5 +1,8 @@
 #!/bin/sh
-echo "start aliasrc"
+
+# if $DEBUG is set then echo start of aliasrc
+[ -n "$DEBUG" ] && echo "start aliasrc"
+
 # Use neovim for vim if present.
 [ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
 
@@ -8,61 +11,48 @@ echo "start aliasrc"
 
 # sudo not required for some system commands
 for command in mount umount sv pacman updatedb su shutdown poweroff reboot ; do
-	alias $command="sudo $command"
+    alias $command='sudo $command'
 done; unset command
 
-# Verbosity and settings that you pretty much just always are going to want.
+# verbose and interactive by default 
 alias \
-	cp="cp -iv" \
-	mv="mv -iv" \
-	rm="rm -vI" \
-	bc="bc -ql" \
-	mkd="mkdir -pv" \
-	ytd="yt-dlp --write-description --write-playlist-metafiles --write-info-json --write-thumbnail --write-subs" \
-	ytl="yt-dlp --list-formats" \
-	yta="yt-dlp -x -f bestaudio/best" \
-	ffmpeg="ffmpeg -hide_banner"
-	#yt="youtube-dl --add-metadata -i" \ 	
-# --write-description
-# --write-playlist-metafiles
-# --write-info-json
-# --write-thumbnail 
-# --F, --list-formats
-# --write-subs
+    cp="cp -iv" \
+    mv="mv -iv" \
+    rm="rm -vI" \
+
+# video consumption aliases
+alias \
+    yt="yt-dlp" \
+    ytd="yt-dlp --write-description --write-playlist-metafiles --write-info-json --write-thumbnail --write-subs" \
+    ytl="yt-dlp --list-formats" \
+    yta="yt-dlp -x -f bestaudio/best" 
 
 # Colorize commands when possible.
-alias \
-	ls="lsd" \
-	lsh="lsd -la" \
-	grep="grep --color=auto" \
-	diff="diff --color=auto" \
-	ccat="highlight --out-format=ansi"
-	# ls="ls -NF --color=auto --group-directories-first" \
-	# lsl="ls -lhNF --color=auto --group-directories-first" \
-	# lsh="ls -lahNF --color=auto --group-directories-first" \
 
-# These common commands are just too long! Abbreviate them.
 alias \
-	ka="killall" \
-	g="git" \
-	trem="transmission-remote" \
-	YT="youtube-viewer" \
-	sdn="shutdown -h now" \
-	e='$EDITOR' \
-	v='$EDITOR' \
-	p="pacman" \
-	xi="sudo xbps-install" \
-	xr="sudo xbps-remove -R" \
-	xq="xbps-query" \
-	z="zathura"
+    ls="ls -NF --color=auto --group-directories-first" \
+    lsl="ls -lhNF --color=auto --group-directories-first" \
+    lsh="ls -lahNF --color=auto --group-directories-first" 
+
+# if lsd is installed use these aliases instead
+[ -x "$(command -v lsd)" ] &&
+alias \
+    ls="lsd" \
+    lsh="lsd -lA" 
+
+alias \
+    grep="grep --color=auto" \
+    diff="diff --color=auto" \
+    ccat="highlight --out-format=ansi" \
+    less="less  -FgNwW --use-color"
 
 # Quick edit various config/dotfiles
 alias \
-aliasrc="vim $HOME/.config/shell/aliasrc" \
-prompt="vim $HOME/.config/shell/.bash_prompt" \
-profile="vim $HOME/.config/shell/.profile" \
-bashrc="vim $HOME/.bashrc" \
-vimrc="vim $HOME/.config/nvim/"
+aliasrc='vim $HOME/.config/shell/aliasrc' \
+prompt='vim $HOME/.config/shell/.bash_prompt' \
+profile='vim $HOME/.config/shell/.profile' \
+bashrc='vim $HOME/.bashrc' \
+vimrc='vim $HOME/.config/nvim/'
 
 alias flite="flite_cmu_us_eey"
 
@@ -71,4 +61,7 @@ alias flite="flite_cmu_us_eey"
 # https://www.atlassian.com/git/tutorials/dotfiles
 # https://news.ycombinator.com/item?id=11071754
 # https://youtu.be/tBoLDpTWVOM
-alias conf="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias conf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# if $DEBUG is set then echo end of aliasrc
+[ -n "$DEBUG" ] && echo "end aliasrc"

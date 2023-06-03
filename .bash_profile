@@ -1,8 +1,11 @@
-#
-# ~/.bash_profile
+#!/bin/bash
+
 ### runs on login ###
-echo "start .bash_profile"
-[[ -f /home/tim/.config/shell/.profile ]] && . /home/tim/.config/shell/.profile
-#[[ -f ~/.bashrc ]] && . ~/.bashrc
-#exec startx
-echo "end .bash_profile"
+# if $DEBUG is set then echo start of .bash_profile
+[ -n "$DEBUG" ] && echo "start .bash_profile"
+
+# if $HOME/.bashrc exists then source it
+[ -f "$HOME/.bashrc" ] && . $HOME/.bashrc
+
+# if $DEBUG is set then echo end of .bash_profile
+[ -n "$DEBUG" ] && echo "end .bash_profile"

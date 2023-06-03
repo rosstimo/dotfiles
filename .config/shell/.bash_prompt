@@ -1,16 +1,21 @@
 #!/usr/bin/env bash
 
+# if $DEBUG is set then echo start of .bash_prompt
+[ -n "$DEBUG" ] && echo "start .bash_prompt"
+
 # Shell prompt based on the Solarized Dark theme.
 # Screenshot: http://i.imgur.com/EkEtphC.png
 # Heavily inspired by @necolas’s prompt: https://github.com/necolas/dotfiles
 # iTerm → Profiles → Text → use 13pt Monaco with 1.1 vertical spacing.
 
-echo "start .bash_prompt"
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
 	export TERM='gnome-256color';
 elif infocmp xterm-256color >/dev/null 2>&1; then
 	export TERM='xterm-256color';
 fi;
+
+# if $DEBUG is set then echo terminal colors = $TERM
+[ -n "$DEBUG" ] && echo "terminal colors = $TERM"
 
 prompt_git() {
 	local s='';
@@ -119,6 +124,14 @@ PS1+="\$(prompt_git \"\[${blue}\]\" \"\[${violet}\]\")"; # Git repository detail
 PS1+="\[${userStyle}\]\$ \[${reset}\]"; # `$` (and reset color)
 export PS1;
 
+# if $DEBUG is set then echo PS1 = $PS1
+[ -n "$DEBUG" ] && echo "PS1 = $PS1"
+
 PS2="\[${yellow}\]→ \[${reset}\]";
 export PS2;
-echo "end .bash_prompt"
+
+# if $DEBUG is set then echo PS2 = $PS2
+[ -n "$DEBUG" ] && echo "PS2 = $PS2"
+
+# if $DEBUG is set then echo end of .bash_prompt
+[ -n "$DEBUG" ] && echo "end .bash_prompt"

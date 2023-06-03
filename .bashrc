@@ -1,10 +1,11 @@
-#
-# ~/.bashrc
-### runs each time terminal opens ###
+#!/bin/bash
+### runs each time terminal opens bash shell###
 
-echo "start .bashrc"
+# if $DEBUG is set then echo start of .bashrc
+[ -n "$DEBUG" ] && echo "start .bashrc"
+
 # read primary profile if it exists
-[[ -f ~/.config/shell/.profile ]] && . ~/.config/shell/.profile
+[[ -f $HOME/.config/shell/.profile ]] && . $HOME/.config/shell/.profile
 
 #load bash tab completion
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
@@ -19,7 +20,7 @@ shopt -s histappend
 # no duplicates
 export HISTCONTROL=ignoredups:erasedups
 export HISTSIZE=10000
-export HISTFILESIZE = 100000
+export HISTFILESIZE=100000
 
-echo "end .bashrc"
-clear
+# if $DEBUG is set then echo end of .bashrc
+[ -n "$DEBUG" ] && echo "end .bashrc"
