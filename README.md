@@ -1,4 +1,4 @@
-# dotfies
+# dotfiles
 
 ## bare git repo to keep track of my linux dotfiles
 
@@ -40,13 +40,11 @@ conf push
 ```
 
 ***
-See the following for more information:
 
+See the following for more information:
 
 https://news.ycombinator.com/item?id=11071754
 
-
 https://www.atlassian.com/git/tutorials/dotfiles
-
 
 https://youtu.be/tBoLDpTWVOMv
