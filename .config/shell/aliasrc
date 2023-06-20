@@ -54,7 +54,14 @@ profile='vim $HOME/.config/shell/.profile' \
 bashrc='vim $HOME/.bashrc' \
 vimrc='vim $HOME/.config/nvim/'
 
+# text to speech 
 alias flite="flite_cmu_us_eey"
+
+# cd into ~/Documents/notes then open a new markdown file 
+# named as note_ with today's year, month, day, hour, minute
+# as part of the file name.
+alias note="cd $HOME/Documents/notes && vim note_$(date +%Y%m%d%H%M).md"
+
 
 # use conf to manage the bare git repo for dotfiles.
 # see:
