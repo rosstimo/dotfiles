@@ -11,7 +11,8 @@
 export EDITOR="nvim"
 export TERMINAL="alacritty"
 export BROWSER="firefox"
-
+export LANGUAGE="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 ## sources ##
 
 # read prompt settings if exists
