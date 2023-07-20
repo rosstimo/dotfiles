@@ -11,40 +11,40 @@
 
 # sudo not required for some system commands
 for command in mount umount sv pacman updatedb su shutdown poweroff reboot ; do
-    alias $command="sudo $command"
+  [ -x "$(command -v $command)" ] && alias $command="sudo $command" 
 done; unset command
 
 # verbose and interactive by default 
 alias \
-    cp="cp -iv" \
-    mv="mv -iv" \
-    rm="rm -vI" \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
 
 # video consumption aliases
 alias \
-    yt="yt-dlp" \
-    ytd="yt-dlp --write-description --write-playlist-metafiles --write-info-json --write-thumbnail --write-subs" \
-    ytl="yt-dlp --list-formats" \
-    yta="yt-dlp -x -f bestaudio/best" 
+	yt="yt-dlp" \
+	ytd="yt-dlp --write-description --write-playlist-metafiles --write-info-json --write-thumbnail --write-subs" \
+	ytl="yt-dlp --list-formats" \
+	yta="yt-dlp -x -f bestaudio/best" 
 
 # Colorize commands when possible.
 
 alias \
-    ls="ls -NF --color=auto --group-directories-first" \
-    lsl="ls -lhNF --color=auto --group-directories-first" \
-    lsh="ls -lahNF --color=auto --group-directories-first" 
+	ls="ls -NF --color=auto --group-directories-first" \
+	lsl="ls -lhNF --color=auto --group-directories-first" \
+	lsh="ls -lahNF --color=auto --group-directories-first" 
 
 # if lsd is installed use these aliases instead
 [ -x "$(command -v lsd)" ] &&
 alias \
-    ls="lsd" \
-    lsh="lsd -lA" 
+	ls="lsd" \
+	lsh="lsd -lA" 
 
 alias \
-    grep="grep --color=auto" \
-    diff="diff --color=auto" \
-    ccat="highlight --out-format=ansi" \
-    less="less  -FgNwW --use-color"
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi" \
+	less="less  -FgNwW --use-color"
 
 # Quick edit various config/dotfiles
 alias \
