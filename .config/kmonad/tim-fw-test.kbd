@@ -29,8 +29,11 @@ Notes:
 (defalias
   def (layer-switch default)
   first (layer-switch first)
+  fld   (tap-hold 500 @first   #(@def XX))
   second (layer-switch second)
+  sld   (tap-hold 500 @second  #(@def XX))
   third (layer-switch third)
+  tld   (tap-hold 500 @third   #(@def XX))
  )
 
 
@@ -44,6 +47,15 @@ Notes:
   ar (sticky-key 300 ralt)
   ml (sticky-key 300 lmet)
 )
+
+;;home row modifiers
+(defalias
+  sla   (tap-hold-next-release 2000 a lsft)
+  cls   (tap-hold-next-release 2000 s lctl)
+  srCol (tap-hold-next-release 2000 ; rsft)
+  crl   (tap-hold-next-release 2000 l rctl)
+
+ )
 
 (defalias
   f4   (tap-hold-next 300 f4 caps)
@@ -95,7 +107,7 @@ Notes:
   @first   f1   f2   f3   @f4  f5   f6   f7   f8   f9   f10  f11  f12 prnt ins del
   @grv  @1   @2   @3   @4   @5   @6   @7   @8   @9   @0   @-   @=           bspc
   tab   q    w    e    r    t    y    u    i    o    p    @[   @]  @\
-  esc   a    s    d    f    g    h    j    k    l    @;   @'                ret
+  esc   @sla    @cls    d    f    g    h    j    k    @crl    @srCol   @'                ret
   @sl   z    x    c    v    b    n    m    @,   @.   @/                     @sr
   @cl   @ml  @al  spc                      @ar  @cr       @left @up @down @rght
 
@@ -103,7 +115,7 @@ Notes:
 )
 
 (deflayer first
-  @second    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _  
+  @sld _    _    _    _    _    _    _    _    _    _    _    _    _    _    _  
   _    _    _    _    _    _    _    _    _    _    _    _    _              _  
   _    _    _    _    _    _    _    _    _    _    _    _    _    _  
   _    1    _    _    _    _    _    _    _    _    _    _                   _  
@@ -114,7 +126,7 @@ Notes:
 )
 
 (deflayer second
-  @third    _    _    _    _    _    _    _    _    _    _    _    _    _    _    _  
+  @tld _    _    _    _    _    _    _    _    _    _    _    _    _    _    _  
   _    _    _    _    _    _    _    _    _    _    _    _    _              _  
   _    _    _    _    _    _    _    _    _    _    _    _    _    _  
   _    2    _    _    _    _    _    _    _    _    _    _                   _  
