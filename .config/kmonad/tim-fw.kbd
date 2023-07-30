@@ -25,16 +25,40 @@ Notes:
 
 |#
 
+;; layers
+(defalias
+  def (layer-switch default)
+  escd  (tap-hold 200 esc  #(@def XX))
+ 
+  num   (layer-switch numbers)
+  numd  (tap-hold 500 @num #(@def XX))
+  escn  (tap-hold 200 esc  #(@num XX))
+ )
+
+
 ;; make modifiers sticky
 (defalias
-  sl (sticky-key 300 lsft) 
-  sr (sticky-key 300 rsft)
-  cl (sticky-key 300 lctl)
-  cr (sticky-key 300 rctl)
-  al (sticky-key 300 lalt)
-  ar (sticky-key 300 ralt)
-  ml (sticky-key 300 lmet)
+  sl (sticky-key 500 lsft) 
+  sr (sticky-key 500 rsft)
+  cl (sticky-key 500 lctl)
+  cr (sticky-key 500 rctl)
+  al (sticky-key 500 lalt)
+  ar (sticky-key 500 ralt)
+  ml (sticky-key 500 lmet)
 )
+
+;;home row modifiers
+(defalias
+  sla   (tap-hold-next-release 2000 a lsft)
+  cls   (tap-hold-next-release 2000 s lctl)
+  ald   (tap-hold-next-release 2000 d lalt)
+  mlf   (tap-hold-next-release 2000 f lmet)
+  mrj   (tap-hold-next-release 2000 j rmet)
+  ark   (tap-hold-next-release 2000 k ralt)
+  crl   (tap-hold-next-release 2000 l rctl)
+  sr;   (tap-hold-next-release 2000 ; rsft)
+ )
+
 (defalias
   f4   (tap-hold-next 300 f4 caps)
   caps   (tap-next esc lctl)
@@ -82,15 +106,27 @@ Notes:
 )
 
 (deflayer default
-  esc   f1   f2   f3   @f4  f5   f6   f7   f8   f9   f10  f11  f12 prnt ins del
+  @escn   f1   f2   f3   @f4  f5   f6   f7   f8   f9   f10  f11  f12 prnt ins del
   @grv  @1   @2   @3   @4   @5   @6   @7   @8   @9   @0   @-   @=           bspc
   tab   q    w    e    r    t    y    u    i    o    p    @[   @]  @\
-  esc   a    s    d    f    g    h    j    k    l    @;   @'                ret
+  @escn   @sla @cls @ald @mlf g    h    @mrj @ark @crl @sr; @'                ret
   @sl   z    x    c    v    b    n    m    @,   @.   @/                     @sr
   @cl   @ml  @al  spc                      @ar  @cr       @left @up @down @rght
 
   home   pgup   pgdn   end
 )
+
+(deflayer numbers
+  @escd _    _    _    _    _    _    _    _    _    _    _    _    _    _    _  
+  _    _    _    _    _    _    _    _    _    _    _    _    _              _  
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _  
+  @escd @1   @2   @3   @4   @5   @6   @7   @8   @9   @0    _                   _  
+  _    _    _    _    _    _    _    _    _    _    _                        _  
+  _    _    _    _                        _    _              _    _    _    _  
+
+  _    _    _    _  
+)
+
 
 #|
 (deflayer empty ;; this would be a completly transparent layer
