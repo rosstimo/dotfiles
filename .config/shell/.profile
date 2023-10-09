@@ -6,7 +6,8 @@
 # add scripts dir to path
 [ -d "$HOME/.local/bin" ] && export PATH="$HOME/.local/bin:$PATH"
 [ -d "$HOME/.local/shell" ] && export PATH="$HOME/.local/shell:$PATH"
-[ -d "$HOME/.screenlayout" ] && export PATH="$HOME/.local/shell:$PATH"
+[ -d "$HOME/.screenlayout" ] && export PATH="$HOME/.screenlayout:$PATH"
+[ -d "$HOME/.local/share/arduino/" ] && export PATH="$HOME/.local/share/arduino:$PATH"
 
 ## exports ##
 export EDITOR="nvim"

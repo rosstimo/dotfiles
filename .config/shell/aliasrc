@@ -25,7 +25,7 @@ alias \
     yt="yt-dlp" \
     ytd="yt-dlp --write-description --write-playlist-metafiles --write-info-json --write-thumbnail --write-subs" \
     ytl="yt-dlp --list-formats" \
-    yta="yt-dlp -x -f bestaudio/best" 
+    yta="yt-dlp -x -f bestaudio/best --audio-format mp3" \
 
 # Colorize commands when possible.
 
@@ -45,6 +45,8 @@ alias \
     diff="diff --color=auto" \
     ccat="highlight --out-format=ansi" \
     less="less  -FgNwW --use-color"
+
+alias arduino="arduino-ide"
 
 # Quick edit various config/dotfiles
 alias \
