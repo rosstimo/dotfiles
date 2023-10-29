@@ -11,7 +11,7 @@
 {
     // Position TOP
     "position": "top",
-    "margin-top": 14,
+    "margin-top": 0,
     "margin-bottom": 0,
 
     // Position BOTTOM
@@ -21,9 +21,9 @@
 
      // General Settings
     "layer": "top",
-    "height": 16,
-    "margin-left": 0,
-    "margin-right": 0,    
+    "height": 10,
+    "margin-left": 20,
+    "margin-right": 10,    
     "spacing": 0,
 
     // Load Modules
@@ -51,6 +51,8 @@
         "tray",
         //"custom/youtube",
         //"custom/updates",
+        "backlight",
+        "backlight/slider",
         "pulseaudio",
         "bluetooth",
         "battery",

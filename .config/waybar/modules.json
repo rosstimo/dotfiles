@@ -264,6 +264,19 @@
         "on-click": "blueman-manager"
     },
 
+"backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+
+    // Backlight
+    "backlight/slider": {
+      "min": 0,
+      "max": 100,
+      "orientation": "horizontal",
+    },
+
     // Other
     "user": {
         "format": "{user}",
