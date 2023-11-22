@@ -52,7 +52,7 @@
         //"custom/youtube",
         //"custom/updates",
         "backlight",
-        "backlight/slider",
+        //"backlight/slider",
         "pulseaudio",
         "bluetooth",
         "battery",
