@@ -18,7 +18,7 @@ export LC_ALL="en_US.UTF-8"
 ## sources ##
 
 # read prompt settings if exists
-[ -f "$HOME/.config/shell/.bash_prompt" ] && . $HOME/.config/shell/.bash_prompt
+# [ -f "$HOME/.config/shell/.bash_prompt" ] && . $HOME/.config/shell/.bash_prompt
 # read aliases if exists
 [ -f "$HOME/.config/shell/aliasrc" ] && . $HOME/.config/shell/aliasrc
 
