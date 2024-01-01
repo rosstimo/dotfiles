@@ -158,9 +158,9 @@ this should be a comm
 vimnav layer
 try colmakd and/or workman layer
 how does fallthrough work?
-home row modifiers
+home row modifiers --> works great!
 mouse?
-try make all natural modifiers sticky for better 1 hand operations
+try make all natural modifiers sticky for better 1 hand operations --> this kinda sucks right now
 |#
 ;; vim: ft=elisp
 ;; run :set filetype=lisp
