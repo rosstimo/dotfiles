@@ -110,8 +110,8 @@ Notes:
   @grv  @1   @2   @3   @4   @5   @6   @7   @8   @9   @0   @-   @=           bspc
   tab   q    w    e    r    t    y    u    i    o    p    @[   @]  @\
   @escn   @sla @cls @ald @mlf g    h    @mrj @ark @crl @sr; @'                ret
-  @sl   z    x    c    v    b    n    m    @,   @.   @/                     @sr
-  @cl   @ml  @al  spc                      @ar  @cr       @left @up @down @rght
+  lsft z    x    c    v    b    n    m    @,   @.   @/                     rsft
+  lctl   lmet  lalt  spc                      ralt  rctrl       left up down rght
 
   home   pgup   pgdn   end
 )
