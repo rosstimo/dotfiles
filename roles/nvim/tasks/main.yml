@@ -1,0 +1,46 @@
+- name: Install NeoVim
+  package:
+    name: 
+      - neovim
+      - python3-neovim
+      - nodejs
+      - npm
+      - ripgrep
+      - universal-ctags
+      # Add other dependencies as needed
+    state: present
+
+- name: Clone NvChad repository
+  git:
+    repo: 'https://github.com/NvChad/NvChad.git'
+    dest: '~/.config/nvim'
+    version: main
+    force: yes
+  become_user: "{{ ansible_user_id }}"
+
+- name: Clone custom NvChad settings
+  git:
+    repo: 'https://github.com/rosstimo/nvChadCustom.git'
+    dest: '/tmp/nvChadCustom'
+    version: main
+  become_user: "{{ ansible_user_id }}"
+
+- name: Copy custom NvChad settings
+  copy:
+    src: '/tmp/nvChadCustom/'
+    dest: '~/.config/nvim/lua/custom/'
+    remote_src: yes
+  become_user: "{{ ansible_user_id }}"
+
+- name: Ensure ~/.local/bin exists
+  file:
+    path: "~/.local/bin"
+    state: directory
+    mode: '0755'
+
+- name: Deploy custom compile script
+  copy:
+    src: "files/compile.sh"
+    dest: "~/.local/bin/compile.sh"
+    mode: '0755'
+    
