@@ -106,3 +106,12 @@ cmd zip ${{
     zip -r $1.zip $1
     rm -rf $1
 }}
+
+#previewer
+set previewer ctpv
+set cleaner ctpvclear
+&ctpv -s $id
+&ctpvquit $id
+
+# sandbox the previews with BubbleWrap
+#set previewer ~/.config/lf/previewSandbox.sh
