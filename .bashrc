@@ -4,8 +4,15 @@
 # if $DEBUG is set then echo start of .bashrc
 [ -n "$DEBUG" ] && echo "start .bashrc"
 
+# run raabe .bashrc first
+[[ -f $HOME/dotfiles/.bashrc ]] && . $HOME/dotfiles/.bashrc
+
+
 # read primary profile if it exists
 [[ -f $HOME/.config/shell/.profile ]] && . $HOME/.config/shell/.profile
+
+# read .bash_prompt if it exists
+[[ -f $HOME/.config/shell/.bash_prompt ]] && . $HOME/.config/shell/.bash_prompt
 
 #load bash tab completion
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
