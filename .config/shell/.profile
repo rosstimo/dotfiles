@@ -11,10 +11,11 @@
 
 ## exports ##
 export EDITOR="nvim"
-export TERMINAL="alacritty"
+export TERMINAL="kitty" #"alacritty"
 export BROWSER="firefox"
 export LANGUAGE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
+export KICAD_CUSTOM_LIB_DIR="$HOME/Documents/kiCad/KiCadLibs/"
 ## sources ##
 
 # read prompt settings if exists
