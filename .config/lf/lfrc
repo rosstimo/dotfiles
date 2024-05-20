@@ -1,3 +1,6 @@
+# https://wiki.archlinux.org/title/Lf
+# https://github.com/gokcehan/lf/blob/master/doc.md
+
 # interpreter for shell commands
 set shell sh
 
