@@ -1,3 +1,6 @@
+# https://wiki.archlinux.org/title/Lf
+# https://github.com/gokcehan/lf/blob/master/doc.md
+
 # interpreter for shell commands
 set shell sh
 
@@ -115,3 +118,7 @@ set cleaner ctpvclear
 
 # sandbox the previews with BubbleWrap
 #set previewer ~/.config/lf/previewSandbox.sh
+
+set icons true
+set icons-file ~/.config/lf/icons
+
