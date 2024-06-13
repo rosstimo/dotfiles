@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "00TJR")(type "Legacy")(uri "${KICAD_CUSTOM_LIB_DIR}/00TJR.lib")(options "")(descr ""))
+)

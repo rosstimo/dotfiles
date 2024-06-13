@@ -4,6 +4,10 @@
 # if $DEBUG is set then echo start of .bashrc
 [ -n "$DEBUG" ] && echo "start .bashrc"
 
+# run raabe .bashrc first
+[[ -f $HOME/dotfiles/.bashrc ]] && . $HOME/dotfiles/.bashrc
+
+
 # read primary profile if it exists
 [[ -f $HOME/.config/shell/.profile ]] && . $HOME/.config/shell/.profile
 

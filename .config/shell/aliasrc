@@ -74,3 +74,6 @@ alias conf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # if $DEBUG is set then echo end of aliasrc
 [ -n "$DEBUG" ] && echo "end aliasrc"
+
+
+

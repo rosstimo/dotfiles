@@ -10,7 +10,7 @@
   fallthrough true
 
   ;; Set this to false to disable any command-execution in KMonad
-  allow-cmd false
+  allow-cmd true
 )
 #|
 Notes:
@@ -28,6 +28,7 @@ Notes:
 ;; layers
 (defalias
   def (layer-switch default)
+  noti (cmd-button "notify-send 'Layer Switched: You have switched layers in KMonad'")
   escd  (tap-hold 200 esc  #(@def XX))
  
   num   (layer-switch numbers)
@@ -106,12 +107,12 @@ Notes:
 )
 
 (deflayer default
-  @escn   f1   f2   f3   @f4  f5   f6   f7   f8   f9   f10  f11  f12 prnt ins del
+  @escn   @noti   f2   f3   @f4  f5   f6   f7   f8   f9   f10  f11  f12 prnt ins del
   @grv  @1   @2   @3   @4   @5   @6   @7   @8   @9   @0   @-   @=           bspc
   tab   q    w    e    r    t    y    u    i    o    p    @[   @]  @\
   @escn   @sla @cls @ald @mlf g    h    @mrj @ark @crl @sr; @'                ret
-  @sl   z    x    c    v    b    n    m    @,   @.   @/                     @sr
-  @cl   @ml  @al  spc                      @ar  @cr       @left @up @down @rght
+  lsft z    x    c    v    b    n    m    @,   @.   @/                     rsft
+  lctl   lmet  lalt  spc                      ralt  rctrl       left up down rght
 
   home   pgup   pgdn   end
 )
@@ -158,9 +159,9 @@ this should be a comm
 vimnav layer
 try colmakd and/or workman layer
 how does fallthrough work?
-home row modifiers
+home row modifiers --> works great!
 mouse?
-try make all natural modifiers sticky for better 1 hand operations
+try make all natural modifiers sticky for better 1 hand operations --> this kinda sucks right now
 |#
 ;; vim: ft=elisp
 ;; run :set filetype=lisp
