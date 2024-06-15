@@ -14,11 +14,15 @@
 #     alias "$command"="sudo $command"
 # done; unset command
 
-# verbose and interactive by default 
+# verbose and interactive by default
+# TODO: add rsync move and copy aliases
 alias \
     cp="cp -iv" \
     mv="mv -iv" \
     rm="rm -vI" \
+
+# Always mkdir a path (this doesn't inhibit functionality to make a single dir)
+alias mkdir='mkdir -p'
 
 # video consumption aliases
 alias \
