@@ -70,5 +70,21 @@ alias mkdir='mkdir -p'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# History file configuration
+export HISTFILE=~/.zsh_history
+export HISTSIZE=10000
+export SAVEHIST=10000
+
+# History options
+setopt INC_APPEND_HISTORY       # Write to the history file immediately
+setopt SHARE_HISTORY            # Share history between all sessions
+# setopt EXTENDED_HISTORY         # Record timestamp of command in HISTFILE
+unsetopt EXTENDED_HISTORY       # Do not record timestamp of command in HISTFILE
+setopt HIST_IGNORE_DUPS         # Ignore duplicated commands in history list
+setopt HIST_IGNORE_ALL_DUPS     # Delete an old recorded event if a new event is a duplicate
+setopt HIST_IGNORE_SPACE        # Ignore commands that start with space
+setopt HIST_EXPIRE_DUPS_FIRST   # Expire a duplicate event first when trimming history
+setopt HIST_VERIFY              # Show command with history expansion to user before running it
+
 # Source aliasrc if it exists
 [ -f "$HOME/.config/shell/aliasrc" ] && . $HOME/.config/shell/aliasrc
