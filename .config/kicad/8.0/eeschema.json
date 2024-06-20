@@ -126,17 +126,24 @@
   "field_editor": {
     "column_widths": {},
     "export_filename": "",
-    "field_widths": {},
+    "field_widths": {
+      "${DNP}": 100,
+      "${QUANTITY}": 100,
+      "Datasheet": 100,
+      "Footprint": 181,
+      "Reference": 100,
+      "Value": 100
+    },
     "fields_group_by": {},
     "fields_show": {
       "Datasheet": true,
       "Reference": true
     },
-    "height": 0,
+    "height": 603,
     "page": 0,
     "scope": 0,
     "selection_mode": 0,
-    "width": 0
+    "width": 906
   },
   "find_replace": {
     "find_history": [
@@ -175,7 +182,7 @@
   },
   "lib_tree": {
     "column_widths": {
-      "Description": 243,
+      "Description": 381,
       "Item": 190
     },
     "columns": [
@@ -185,7 +192,7 @@
     "open_libs": [
       "-- Recently Used --",
       "-- Already Placed --",
-      "00TJR"
+      "Connector"
     ]
   },
   "lib_view": {
@@ -254,33 +261,34 @@
     "thickness": 3
   },
   "simulator": {
-    "cursors_panel_height": 276,
-    "measurements_panel_height": 0,
-    "plot_panel_height": 500,
-    "plot_panel_width": 700,
-    "signal_panel_height": 350,
+    "cursors_panel_height": 244,
+    "measurements_panel_height": 95,
+    "plot_panel_height": 234,
+    "plot_panel_width": 344,
+    "signal_panel_height": 184,
     "white_background": false,
     "window": {
       "display": 0,
-      "maximized": false,
+      "maximized": true,
       "perspective": "layout2|",
-      "pos_x": 20,
-      "pos_y": 55,
+      "pos_x": 0,
+      "pos_y": 0,
       "size_x": 930,
       "size_y": 1005
     }
   },
   "symbol_chooser": {
-    "height": 713,
+    "height": 628,
     "keep_symbol": false,
     "place_all_units": true,
-    "sash_pos_h": 440,
+    "sash_pos_h": 578,
     "sash_pos_v": 489,
     "sort_mode": 0,
-    "width": 780
+    "width": 951
   },
   "system": {
     "file_history": [
+      "/home/tim/Documents/code/repos/MotorProject/PCB/MotorInterfacePiPico/MotorInterfacePiPico.kicad_sch",
       "/home/tim/Documents/code/repos/MotorProject/PCB/MotorInterfaceDiscrete/MotorInterface.kicad_sch",
       "/home/tim/Documents/code/repos/MotorProject/PCB/junk/MotorInterface.kicad_sch",
       "/home/tim/Documents/code/repos/MotorProject/PCB/MotorInterface/MotorInterface.kicad_sch",
@@ -296,7 +304,7 @@
     "first_run_shown": true,
     "last_imperial_units": 0,
     "last_metric_units": 1,
-    "last_symbol_lib_dir": "/home/tim/Documents/kiCad/KiCadLibs",
+    "last_symbol_lib_dir": "/home/tim/.config/kicad/kicad-symbols",
     "max_undo_items": 0,
     "never_show_rescue_dialog": false,
     "units": 0
@@ -360,7 +368,7 @@
     },
     "maximized": true,
     "mru_path": "",
-    "perspective": "layout2|name=InfoBar;caption=;state=131454;dir=1;layer=1;row=0;pos=0;prop=100000;bestw=20;besth=30;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=MainToolbar;caption=;state=139632;dir=1;layer=6;row=0;pos=0;prop=100000;bestw=1204;besth=34;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=MsgPanel;caption=;state=131452;dir=3;layer=6;row=0;pos=0;prop=100000;bestw=400;besth=34;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=SchematicHierarchy;caption=Schematic Hierarchy;state=2099150;dir=4;layer=3;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=120;minh=60;maxw=-1;maxh=-1;floatx=45;floaty=45;floatw=200;floath=200|name=PropertiesManager;caption=Properties;state=2099150;dir=4;layer=3;row=0;pos=0;prop=100000;bestw=300;besth=200;minw=240;minh=60;maxw=-1;maxh=-1;floatx=50;floaty=200;floatw=300;floath=400|name=NetNavigator;caption=Net Navigator;state=2099150;dir=4;layer=3;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=120;minh=60;maxw=-1;maxh=-1;floatx=50;floaty=200;floatw=200;floath=200|name=OptToolbar;caption=;state=139596;dir=4;layer=2;row=0;pos=0;prop=100000;bestw=34;besth=460;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=ToolsToolbar;caption=;state=139596;dir=2;layer=2;row=0;pos=0;prop=100000;bestw=34;besth=762;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=DrawFrame;caption=;state=1020;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=400;besth=194;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Search;caption=Search;state=2098686;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=180;besth=100;minw=180;minh=60;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=480;floath=200|dock_size(1,6,0)=34|dock_size(3,6,0)=34|dock_size(4,2,0)=34|dock_size(2,2,0)=34|dock_size(5,0,0)=338|",
+    "perspective": "layout2|name=InfoBar;caption=;state=131454;dir=1;layer=1;row=0;pos=0;prop=100000;bestw=20;besth=30;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=MainToolbar;caption=;state=139632;dir=1;layer=6;row=0;pos=0;prop=100000;bestw=932;besth=26;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=MsgPanel;caption=;state=131452;dir=3;layer=6;row=0;pos=0;prop=100000;bestw=400;besth=34;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=SchematicHierarchy;caption=Schematic Hierarchy;state=2099150;dir=4;layer=3;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=120;minh=60;maxw=-1;maxh=-1;floatx=37;floaty=37;floatw=200;floath=200|name=PropertiesManager;caption=Properties;state=2099150;dir=4;layer=3;row=0;pos=0;prop=100000;bestw=300;besth=200;minw=240;minh=60;maxw=-1;maxh=-1;floatx=50;floaty=200;floatw=300;floath=400|name=NetNavigator;caption=Net Navigator;state=2099150;dir=4;layer=3;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=120;minh=60;maxw=-1;maxh=-1;floatx=50;floaty=200;floatw=200;floath=200|name=OptToolbar;caption=;state=139596;dir=4;layer=2;row=0;pos=0;prop=100000;bestw=26;besth=356;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=ToolsToolbar;caption=;state=139596;dir=2;layer=2;row=0;pos=0;prop=100000;bestw=26;besth=578;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=DrawFrame;caption=;state=1020;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=400;besth=445;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Search;caption=Search;state=2098686;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=180;besth=100;minw=180;minh=60;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=480;floath=200|dock_size(1,6,0)=26|dock_size(3,6,0)=34|dock_size(4,2,0)=26|dock_size(2,2,0)=26|dock_size(5,0,0)=338|",
     "pos_x": 0,
     "pos_y": 0,
     "size_x": 1128,

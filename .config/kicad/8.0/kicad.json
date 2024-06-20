@@ -63,8 +63,8 @@
     "check_for_kicad_updates": true,
     "check_for_updates": 2,
     "file_history": [
+      "/home/tim/Documents/code/repos/MotorProject/PCB/MotorInterfacePiPico/MotorInterfacePiPico.kicad_pro",
       "/home/tim/Documents/code/repos/MotorProject/PCB/MotorInterfaceDiscrete/MotorInterface.kicad_pro",
-      "/home/tim/Documents/code/repos/MotorProject/PCB/junk/MotorInterface.kicad_pro",
       "/home/tim/Documents/code/repos/MotorProject/PCB/MotorInterface/MotorInterface.kicad_pro",
       "/home/tim/Documents/kiCad/projects/MUX-DEMUX/MUXDEMUX/MUXDEMUX.kicad_pro",
       "/home/tim/Documents/kiCad/projects/TestThing/TestThing/TestThing.kicad_pro",
@@ -79,10 +79,10 @@
     "last_imperial_units": 0,
     "last_metric_units": 1,
     "last_received_update": "",
-    "last_update_check_time": "2024-06-06T16:18:05",
+    "last_update_check_time": "2024-06-19T15:24:23",
     "max_undo_items": 0,
     "open_projects": [
-      ""
+      "/home/tim/Documents/code/repos/MotorProject/PCB/MotorInterfacePiPico/MotorInterfacePiPico.kicad_pro"
     ],
     "units": 1
   },
@@ -229,8 +229,8 @@
       "user_grid_y": "10 mil"
     },
     "maximized": true,
-    "mru_path": "/home/tim/Documents/code/repos/MotorProject/PCB/MotorInterfaceDiscrete/",
-    "perspective": "layout2|name=MainToolbar;caption=;state=139644;dir=4;layer=2;row=0;pos=0;prop=100000;bestw=34;besth=227;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=ProjectTree;caption=Project Files;state=1532;dir=4;layer=1;row=0;pos=0;prop=100000;bestw=250;besth=-1;minw=250;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Launcher;caption=Editors;state=508;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=576;besth=560;minw=576;minh=560;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(4,2,0)=34|dock_size(4,1,0)=250|dock_size(5,0,0)=576|",
+    "mru_path": "/home/tim/Documents/code/repos/MotorProject/PCB/MotorInterfacePiPico/",
+    "perspective": "layout2|name=MainToolbar;caption=;state=139644;dir=4;layer=2;row=0;pos=0;prop=100000;bestw=26;besth=179;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=ProjectTree;caption=Project Files;state=1532;dir=4;layer=1;row=0;pos=0;prop=100000;bestw=250;besth=-1;minw=250;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Launcher;caption=Editors;state=508;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=576;besth=560;minw=576;minh=560;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(4,2,0)=26|dock_size(4,1,0)=250|dock_size(5,0,0)=576|",
     "pos_x": 0,
     "pos_y": 0,
     "size_x": 1108,

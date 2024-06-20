@@ -114,17 +114,17 @@
   },
   "footprint_chooser": {
     "filter_on_pin_count": false,
-    "height": -1,
-    "sash_h": -1,
-    "sash_v": -1,
+    "height": 400,
+    "sash_h": 176,
+    "sash_v": 319,
     "sort_mode": 0,
     "use_fp_filters": false,
-    "width": -1
+    "width": 549
   },
   "footprint_viewer": {
     "autozoom": true,
     "cursor": {
-      "always_show_cursor": true,
+      "always_show_cursor": false,
       "fullscreen_cursor": false
     },
     "display": 0,
@@ -266,13 +266,13 @@
       "user_grid_y": "10 mil"
     },
     "lib_list_width": 200,
-    "maximized": false,
-    "mru_path": "",
-    "perspective": "",
+    "maximized": true,
+    "mru_path": "/home/tim/.local/share/kicad/8.0/projects",
+    "perspective": "layout2|",
     "pos_x": 0,
     "pos_y": 0,
-    "size_x": 0,
-    "size_y": 0,
+    "size_x": 880,
+    "size_y": 680,
     "zoom": 1.0,
     "zoom_factors": []
   },
@@ -463,9 +463,13 @@
   },
   "lib_tree": {
     "column_widths": {
+      "Description": 600,
       "Item": 360
     },
-    "columns": [],
+    "columns": [
+      "Item",
+      "Description"
+    ],
     "open_libs": []
   },
   "meta": {
