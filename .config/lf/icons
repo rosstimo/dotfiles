@@ -1,0 +1,42 @@
+# https://www.nerdfonts.com/cheat-sheet
+
+# Directories
+di 
+
+# Regular files
+fi 󰈚
+
+# Symbolic links
+ln 
+
+# Pipes
+pi 󰢉
+
+# Sockets
+so 󰟩
+
+# Block devices
+bd 📂
+
+# Character devices
+cd 📂
+
+# Orphaned symlinks
+or 
+
+# Execu󱓟table files
+ex 󱓟
+
+# Specific file types
+*.md 
+*.js 
+*.ts 
+*.json 
+*.html 
+*.css 
+*.py 
+*.sh 
+*.lua 
+*.tex 
+*.conf 
+

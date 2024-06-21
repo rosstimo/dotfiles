@@ -1,6 +1,10 @@
 # https://wiki.archlinux.org/title/Lf
 # https://github.com/gokcehan/lf/blob/master/doc.md
 
+# make sure lf server quits when the last client disconnects
+set autoquit true
+
+
 # interpreter for shell commands
 set shell sh
 
@@ -37,19 +41,20 @@ map x $$f
 map X !$f
 
 # dedicated keys for file opener actions
-map o &mimeopen $f
-map O $mimeopen --ask $f
+# map o &mimeopen $f
+# map O $mimeopen --ask $f
 
 # define a custom 'open' command
 # This command is called when current file is not a directory. You may want to
 # use either file extensions and/or mime types here. Below uses an editor for
 # text files and a file opener for the rest.
-cmd open &{{
-    case $(file --mime-type -Lb $f) in
-        text/*) lf -remote "send $id \$$EDITOR \$fx";;
-        *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
-    esac
-}}
+# cmd open &{{
+#     case $(file --mime-type -Lb $f) in
+        # text/*) lf -remote "send $id \$$EDITOR \$fx";;
+#         *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
+#     esac
+# }}
+#
 
 # mkdir command. See wiki if you want it to select created dir
 map a :push %mkdir<space>
@@ -110,15 +115,75 @@ cmd zip ${{
     rm -rf $1
 }}
 
-#previewer
+# previewer
+# https://github.com/gokcehan/lf/wiki/Previews
+# https://github.com/gokcehan/lf/wiki/Previews#with-stpv-and-ctpv
+# https://github.com/NikitaIvanovV/ctpv
 set previewer ctpv
 set cleaner ctpvclear
 &ctpv -s $id
 &ctpvquit $id
 
-# sandbox the previews with BubbleWrap
-#set previewer ~/.config/lf/previewSandbox.sh
+# sandbox the previews with BubbleWrap TODO
+# set previewer ~/.config/lf/previewSandbox.sh
 
 set icons true
 set icons-file ~/.config/lf/icons
+
+
+# Custom command to open terminal in current directory
+cmd open_terminal ${{
+    kitty --working-directory "$PWD"
+}}
+
+# Keybinding to open terminal
+map t open_terminal
+
+# Custom command to open file or drop into shell if directory
+cmd open_or_shell ${{
+    if [ -d "$f" ]; then
+        cd "$f" && $SHELL 
+        # lf -remote "send $id quit" && cd "$f" && $SHELL
+    else
+        # $OPENER "$f"
+        mimeopen --ask "$f"
+    fi
+}}
+# Keybinding to open file or drop into shell
+map o open_or_shell
+
+# maps to get mimie type of file and default application
+map zmt % echo $(file --mime-type -b $f)
+map zma % echo $(xdg-mime query default $(file --mime-type -b $f))
+
+# command to show all the desktop entries in /usr/share/applications/ then user selects one and it becomes the default application for the selecte files mime type
+cmd set_default_app ${{
+    # get the mime type of the file
+    mime_type=$(file --mime-type -b $f)
+    # get the default application for the mime type
+    default_app=$(xdg-mime query default $mime_type)
+    # get all the desktop entries for the mime type
+    # desktop_entries=$(grep -l $mime_type /usr/share/applications/*.desktop)
+    desktop_entries=$(ls /usr/share/applications/ | grep .desktop)
+    # show the desktop entries
+    # echo $desktop_entries
+    # ask the user to select one
+    echo "Select the default application"
+    # read selected_entry
+    selected_entry=$(echo "$desktop_entries" | fzf)
+    # set the default application
+    xdg-mime default $selected_entry $mime_type
+}}
+
+map zmA set_default_app
+
+
+# command to show all the desktop entries in /usr/share/applications/ then user selects one and it becomes the default application for the selecte file
+# cmd set_default_app ${{
+#     desktop_entries=$(ls /usr/share/applications/ | grep .desktop)
+#     selected_entry=$(echo "$desktop_entries" | fzf)
+#     default_app=$(grep -oP "(?<=Exec=).*" /usr/share/applications/$selected_entry | head -n 1)
+#     xdg-mime default $default_app $(file --mime-type -b $f)
+# }}
+#
 
