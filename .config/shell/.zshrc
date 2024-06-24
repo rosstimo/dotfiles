@@ -89,8 +89,11 @@ setopt HIST_VERIFY              # Show command with history expansion to user be
 # Source aliasrc if it exists
 [ -f "$HOME/.config/shell/aliasrc" ] && . $HOME/.config/shell/aliasrc
 
-# ---- FZF -----
+# Source profile if it exists
+[ -f "$HOME/.config/shell/.profile" ] && . $HOME/.config/shell/.profile
 
+# ---- FZF -----
+alias fzf=fzf-tmux
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
 # -- Use fd instead of fzf --
@@ -111,7 +114,7 @@ _fzf_compgen_dir() {
   fd --type=d --hidden --exclude .git . "$1"
 }
 
-source ~/fzf-git.sh/fzf-git.sh
+source ~/.local/share/fzf-git.sh/fzf-git.sh
 
 alias cat='bat'
 
@@ -141,3 +144,18 @@ eval $(thefuck --alias)
 eval "$(zoxide init zsh)"
 
 alias cd="z"
+
+
+# # Check if the shell is interactive
+# if [ -t 0 ]; then
+#   # Check if tmux is installed
+#   if command -v tmux &> /dev/null; then
+#     # Check if inside tmux
+#     if [[ -z "$TMUX" ]]; then
+#       # Attempt to attach to or start a tmux session silently
+#       (tmux attach-session -t default 2>/dev/null || tmux new-session -s default) &> /dev/null
+#     fi
+#   fi
+# fi
+
+
