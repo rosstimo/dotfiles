@@ -5,6 +5,7 @@
 
 # add scripts dir to path
 [ -d "$HOME/.local/bin" ] && export PATH="$HOME/.local/bin:$PATH"
+[ -d "$HOME/.local/share/bin" ] && export PATH="$HOME/.local/share/bin:$PATH"
 [ -d "$HOME/.local/shell" ] && export PATH="$HOME/.local/shell:$PATH"
 [ -d "$HOME/.screenlayout" ] && export PATH="$HOME/.screenlayout:$PATH"
 [ -d "$HOME/.local/share/arduino/" ] && export PATH="$HOME/.local/share/arduino:$PATH"
@@ -15,7 +16,7 @@ export TERMINAL="kitty" #"alacritty"
 export BROWSER="firefox"
 export LANGUAGE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
-export KICAD_CUSTOM_LIB_DIR="$HOME/Documents/kiCad/KiCadLibs/"
+# export KICAD_CUSTOM_LIB_DIR="$HOME/Documents/kiCad/KiCadLibs/"
 ## sources ##
 
 # read prompt settings if exists

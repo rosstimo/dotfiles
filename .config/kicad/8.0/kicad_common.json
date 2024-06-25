@@ -2,10 +2,10 @@
   "appearance": {
     "hicontrast_dimming_factor": 0.8,
     "icon_scale": 4,
-    "icon_theme": 1,
+    "icon_theme": 2,
     "show_scrollbars": false,
     "text_editor_zoom": 0,
-    "toolbar_icon_size": 24,
+    "toolbar_icon_size": 16,
     "use_icons_in_menus": true
   },
   "auto_backup": {
@@ -37,7 +37,7 @@
   },
   "graphics": {
     "cairo_antialiasing_mode": 0,
-    "opengl_antialiasing_mode": 0
+    "opengl_antialiasing_mode": 1
   },
   "input": {
     "auto_pan": true,
@@ -81,6 +81,6 @@
     "pdf_viewer_name": "",
     "text_editor": "/usr/bin/nvim",
     "use_system_pdf_viewer": true,
-    "working_dir": "/home/tim/Documents/code/repos/MotorProject/PCB/MotorInterfaceDiscrete"
+    "working_dir": "/home/tim"
   }
 }
