@@ -20,6 +20,12 @@ alias \
     mv="mv -iv" \
     rm="rm -vI" \
 
+ # Alias for copying files and directories with backups and custom suffix
+alias rcopy='rsync -aEzhb --info=progress2 --info=stats --info=backup --info=skip --partial'
+
+# Alias for moving files and directories with backups and custom suffix
+alias rmove='rsync -aEzhb --info=progress2 --info=stats --info=backup --info=skip --partial --remove-source-files'
+
 # video consumption aliases
 alias \
     yt="yt-dlp" \
