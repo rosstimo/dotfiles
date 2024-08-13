@@ -5,6 +5,8 @@
 
 # Use neovim for vim if present.
 [ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+[ -x "$(command -v nvim)" ] && alias nano="nvim" vimdiff="nvim -d"
+[ -x "$(command -v nvim)" ] && alias vi="nvim" vimdiff="nvim -d"
 
 # Use $XINITRC variable if file exists.
 [ -f "$XINITRC" ] && alias startx='startx $XINITRC'
@@ -17,9 +19,9 @@
 # verbose and interactive by default
 # TODO: add rsync move and copy aliases
 alias \
-    cp="cp -iv" \
-    mv="mv -iv" \
-    rm="rm -vI" \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 alias mkdir='mkdir -p'
@@ -34,21 +36,21 @@ alias \
 # Colorize commands when possible.
 
 alias \
-    ls="ls -NF --color=auto --group-directories-first" \
-    lsl="ls -lhNF --color=auto --group-directories-first" \
-    lsh="ls -lahNF --color=auto --group-directories-first" 
+	ls="ls -NF --color=auto --group-directories-first" \
+	lsl="ls -lhNF --color=auto --group-directories-first" \
+	lsh="ls -lahNF --color=auto --group-directories-first" 
 
 # if lsd is installed use these aliases instead
 [ -x "$(command -v lsd)" ] &&
 alias \
-    ls="lsd" \
-    lsh="lsd -lA" 
+	ls="lsd" \
+	lsh="lsd -lA" 
 
 alias \
-    grep="grep --color=auto" \
-    diff="diff --color=auto" \
-    ccat="highlight --out-format=ansi" \
-    less="less  -FgNwW --use-color"
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi" \
+	less="less  -FgNwW --use-color"
 
 alias arduino="arduino-ide"
 
