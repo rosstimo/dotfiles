@@ -16,6 +16,10 @@ export BROWSER="firefox"
 export LANGUAGE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export KICAD_CUSTOM_LIB_DIR="$HOME/Documents/kiCad/KiCadLibs/"
+# for stable diffusion
+export PATH=/opt/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
+
 ## sources ##
 
 # read prompt settings if exists
