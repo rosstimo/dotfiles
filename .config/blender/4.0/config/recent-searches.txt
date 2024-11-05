@@ -20,7 +20,6 @@ Pie Apply Transforms (Ctrl A) ▸ Apply All
 Select ▸ Select Similar (Shift G) ▸ Vertex Groups
 Shading (Z) ▸ Toggle X-Ray
 main-cyl
-Edge (Ctrl E) ▸ Edge Slide
 Vertex (Ctrl V) ▸ Vertex Groups (Ctrl G) ▸ Assign to New Group
 UV (U) ▸ Mark Seam
 main
@@ -100,5 +99,9 @@ Mesh ▸ Delete (X) ▸ Collapse Edges & Faces
   Shelf
 Mesh ▸ Clean Up ▸ Merge by Distance
 Mesh ▸ Weights ▸ Normalize All
-Mesh ▸ Normals (Alt N) ▸ Flip
   MainBody
+Add (Shift A) ▸ Curve ▸ Ellipse
+Modes (Tab) ▸ Auto Merge
+Mesh ▸ Normals (Alt N) ▸ Merge
+Mesh ▸ Normals (Alt N) ▸ Flip
+Edge (Ctrl E) ▸ Edge Slide

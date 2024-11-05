@@ -1,5 +1,6 @@
 [Bookmarks]
 [Recent]
+/home/tim/Documents/3Dprinter/sensorTower/
 /home/tim/Documents/3Dprinter/bt_amp/
 /home/tim/Documents/code/repos/2.1in_5watt_Bluetooth_Amp/
 /home/tim/Documents/3Dprinter/Bubbles/
@@ -9,4 +10,3 @@
 /home/tim/Documents/code/Arduino/mouseBot/3DCAD/
 /home/tim/Documents/blender/add-ons/
 /home/tim/Documents/3Dprinter/bedTest/
-/home/tim/Documents/blender/
