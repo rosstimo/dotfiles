@@ -27,7 +27,7 @@ alias mkdir='mkdir -p'
 # video consumption aliases
 alias \
     yt="yt-dlp" \
-    ytd="yt-dlp --write-description --write-playlist-metafiles --write-info-json --write-thumbnail --write-subs" \
+    ytd="yt-dlp --write-description --write-playlist-metafiles --write-info-json --write-thumbnail --write-subs --write-automatic-subs --restrict-filenames" \
     ytl="yt-dlp --list-formats" \
     yta="yt-dlp -x -f bestaudio/best --audio-format mp3" \
 
@@ -39,10 +39,7 @@ alias \
     lsh="ls -lahNF --color=auto --group-directories-first" 
 
 # if lsd is installed use these aliases instead
-[ -x "$(command -v lsd)" ] &&
-alias \
-    ls="lsd" \
-    lsh="lsd -lA" 
+[ -x "$(command -v lsd)" ] && alias lsh="lsd -lA" 
 
 alias \
     grep="grep --color=auto" \

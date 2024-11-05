@@ -65,7 +65,7 @@ function in {
 }
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
-alias mkdir='mkdir -p'
+# alias mkdir='mkdir -p'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -116,9 +116,9 @@ _fzf_compgen_dir() {
 
 source ~/.local/share/fzf-git.sh/fzf-git.sh
 
-alias cat='bat'
+# alias cat='bat'
 
-show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
+# show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
 
 export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
@@ -138,24 +138,14 @@ _fzf_comprun() {
   esac
 }
 
-eval $(thefuck --alias)
+# eval $(thefuck --alias)
 
 # ---- Zoxide (better cd) ----
-eval "$(zoxide init zsh)"
+# eval "$(zoxide init zsh)"
 
-alias cd="z"
+# alias cd="z"
 
 
-# # Check if the shell is interactive
-# if [ -t 0 ]; then
-#   # Check if tmux is installed
-#   if command -v tmux &> /dev/null; then
-#     # Check if inside tmux
-#     if [[ -z "$TMUX" ]]; then
-#       # Attempt to attach to or start a tmux session silently
-#       (tmux attach-session -t default 2>/dev/null || tmux new-session -s default) &> /dev/null
-#     fi
-#   fi
-# fi
+
 
 

@@ -8,10 +8,22 @@
 [ -d "$HOME/.local/share/bin" ] && export PATH="$HOME/.local/share/bin:$PATH"
 [ -d "$HOME/.local/shell" ] && export PATH="$HOME/.local/shell:$PATH"
 [ -d "$HOME/.screenlayout" ] && export PATH="$HOME/.screenlayout:$PATH"
+# add $HOME/.cargo/bin to path
+[ -d "$HOME/.cargo/bin" ] && export PATH="$HOME/.cargo/bin:$PATH"
 [ -d "$HOME/.local/share/arduino/" ] && export PATH="$HOME/.local/share/arduino:$PATH"
+
+[ -d "/usr/local/go/" ] && export GOROOT="/usr/local/go"
+[ -d "$HOME/go" ] && export GOPATH="$HOME/go"
+[ -d "$HOME/go/bin" ] && export PATH="$HOME/go/bin:$PATH"
+ 
+export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.local/bin:$PATH
+
 
 ## exports ##
 export EDITOR="nvim"
+export VISUAL="nvim"
+export PAGER="less"
+export OPENER="xdg-open"
 export TERMINAL="kitty" #"alacritty"
 export BROWSER="firefox"
 export LANGUAGE="en_US.UTF-8"
