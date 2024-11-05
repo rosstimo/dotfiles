@@ -46,7 +46,6 @@ DP-2-2 eDP-1 DP-2-1 Width 1920x1080 DP-2-1=960
 DP-3=DP-3
 DP-3 eDP-1=DP-3
 DP-3-2 DP-3-3 eDP-1=DP-3-2
-State=AAAA/wAAAAD9AAAAAQAAAAAAAACkAAACVfwCAAAAAfsAAAAcAG8AawB1AGwAYQByAF8AcwBpAGQAZQBiAGEAcgEAAABqAAACVQAAARoA///+AAADrAAAAlUAAAAEAAAABAAAAAgAAAAI/AAAAAIAAAACAAAAAgAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAAAAAAsAHEAdQBpAGMAawBBAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHIBAAACVgAABQoAAAAAAAAAAAAAAAIAAAABAAAAIgBhAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAA==
 ToolBarsMovable=Disabled
 eDP-1=eDP-1
 eDP-1 DP-1-1 DP-1-2=DP-1-2
@@ -100,26 +99,26 @@ eDP-1 YPosition 2256x1504 eDP-1=32
 3 screens: Width=600
 
 [Recent Files]
-File1[$e]=/media/veracrypt1/RCET1156B/S24/RCET1156B-21-S24-Section 3 - Lab Write Up-3496300/MatthewHarris-S3-feedback.pdf
-File10[$e]=$HOME/Documents/code/repos/MotorProject/PCB/MotorInterface/MotorInterface.pdf
-File2[$e]=/media/veracrypt1/RCET1156B/S24/RCET1156B-21-S24-Section 3 - Lab Write Up-3496300/NoahHolloway-S3-feedback.pdf
-File3[$e]=/media/veracrypt1/RCET1156B/S24/RCET1156B-21-S24-Section 5 - Lab Write Up-3496310/AlexisVillagran-S5-feedback.pdf
-File4[$e]=/media/veracrypt1/RCET1156B/S24/RCET1156B-21-S24-Section 6 - Lab Write Up-3496316/AngelNava-S6-feedback.pdf
-File5[$e]=/media/veracrypt1/RCET1156B/S24/RCET1156B-21-S24-Section 6 - Lab Write Up-3496316/BrinnleyWilliams-S6-feedback.pdf
-File6[$e]=/media/veracrypt1/RCET1156B/S24/RCET1156B-21-S24-Section 6 - Lab Write Up-3496316/JasonPermann-S6-feedback.pdf
-File7[$e]=/media/veracrypt1/RCET1156B/S24/RCET1156B-21-S24-Section 6 - Lab Write Up-3496316/RudyEarnest-S6-feedback.pdf
-File8[$e]=$HOME/notes/HackerLab/Detailed List.md
-File9[$e]=$HOME/notes/HackerLab/NIST Current and Pending Support Form Prefilled.pdf
-Name1[$e]=MatthewHarris-S3-feedback.pdf
-Name10[$e]=MotorInterface.pdf
-Name2[$e]=NoahHolloway-S3-feedback.pdf
-Name3[$e]=AlexisVillagran-S5-feedback.pdf
-Name4[$e]=AngelNava-S6-feedback.pdf
-Name5[$e]=BrinnleyWilliams-S6-feedback.pdf
-Name6[$e]=JasonPermann-S6-feedback.pdf
-Name7[$e]=RudyEarnest-S6-feedback.pdf
-Name8[$e]=Detailed List.md
-Name9[$e]=NIST Current and Pending Support Form Prefilled.pdf
+File1[$e]=/media/veracrypt1/RCET1156B/S24/RCET1156B-21-S24-Section 6 - Lab Write Up-3496316/BrinnleyWilliams-S6-feedback.pdf
+File10[$e]=$HOME/notes/Git/Notes.md
+File2[$e]=/media/veracrypt1/RCET1156B/S24/RCET1156B-21-S24-Section 6 - Lab Write Up-3496316/JasonPermann-S6-feedback.pdf
+File3[$e]=/media/veracrypt1/RCET1156B/S24/RCET1156B-21-S24-Section 6 - Lab Write Up-3496316/RudyEarnest-S6-feedback.pdf
+File4[$e]=$HOME/notes/HackerLab/Detailed List.md
+File5[$e]=$HOME/notes/HackerLab/NIST Current and Pending Support Form Prefilled.pdf
+File6[$e]=$HOME/Documents/code/repos/MotorProject/PCB/MotorInterface/MotorInterface.pdf
+File7[$e]=$HOME/notes/docker/docker build.md
+File8[$e]=$HOME/notes/docker/Dockerfile.md
+File9[$e]=$HOME/notes/docker/Docker Setup.md
+Name1[$e]=BrinnleyWilliams-S6-feedback.pdf
+Name10[$e]=Notes.md
+Name2[$e]=JasonPermann-S6-feedback.pdf
+Name3[$e]=RudyEarnest-S6-feedback.pdf
+Name4[$e]=Detailed List.md
+Name5[$e]=NIST Current and Pending Support Form Prefilled.pdf
+Name6[$e]=MotorInterface.pdf
+Name7[$e]=docker build.md
+Name8[$e]=Dockerfile.md
+Name9[$e]=Docker Setup.md
 
 [Shortcut Schemes]
 Current Scheme=Default

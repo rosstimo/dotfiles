@@ -2,37 +2,12 @@
 # https://github.com/gokcehan/lf/blob/master/doc.md
 # https://github.com/gokcehan/lf/wiki/Tips
 
-# Set environment variables
-export EDITOR nvim
-export VISUAL nvim
-export PAGER less
-export SHELL /bin/zsh
-export OPENER xdg-open
-export BROWSER firefox
-# export LF_ICONS "di=📁:fi=📄:ln=🔗:pi=📌:so=🔧:bd=📦:cd=📦:or=📂:ex=🚀"
-# export LF_COLORS "di=34:fi=0:ln=36:pi=33:so=35:bd=1;33:cd=1;33:or=31:ex=32"
-# export LF_TRASH "gio trash"
-export LF_TMUX "tmux new-window"
-export LF_FZF "fzf --height 40% --layout=reverse"
-# export LF_PREVIEWER "~/.config/lf/pv.sh"
-
-
-
+# -------- Shell Options -------
 # make sure lf server quits when the last client disconnects
 set autoquit true
 
 # --- Shell options
-# interpreter for shell commands
-# set shell sh
 set shell zsh
-
-# set '-eu' options for shell commands
-# These options are used to have safer shell commands. Option '-e' is used to
-# exit on error and option '-u' is used to give error for unset variables.
-# Option '-f' disables pathname expansion which can be useful when $f, $fs, and
-# $fx variables contain names with '*' or '?' characters. However, this option
-# is used selectively within individual commands as it can be limiting at
-# times.
 set shellopts '-euy'
 
 # set internal field separator (IFS) to "\n" for shell commands
@@ -42,21 +17,37 @@ set shellopts '-euy'
 # commands accordingly.
 set ifs "\n"
 
+# use enter for shell commands
+map <enter> shell
+
+# show the result of execution of previous commands
+map ` !true
+
+# ------- Look and feel -------
+set icons true
+
 # leave some space at the top and the bottom of the screen
 set scrolloff 10
 
 # Use the `dim` attribute instead of underline for the cursor in the preview pane
 set cursorpreviewfmt "\033[7;2m"
 
-# --- Look and feel ---
-set icons true
-# set icons-file ~/.config/lf/icons
+# previewer
+# https://github.com/gokcehan/lf/wiki/Previews
+# https://github.com/gokcehan/lf/wiki/Previews#with-stpv-and-ctpv
+# https://github.com/NikitaIvanovV/ctpv
+set previewer ctpv
+set cleaner ctpvclear
+&ctpv -s $id
+&ctpvquit $id
 
-# use enter for shell commands
-map <enter> shell
+# sandbox the previews with BubbleWrap TODO
+# set previewer ~/.config/lf/previewSandbox.sh
 
-# show the result of execution of previous commands
-map ` !true
+
+
+
+
 
 # execute current file (must be executable)
 map x $$f
@@ -121,18 +112,6 @@ cmd zip ${{
     rm -rf $1
 }}
 
-# previewer
-# https://github.com/gokcehan/lf/wiki/Previews
-# https://github.com/gokcehan/lf/wiki/Previews#with-stpv-and-ctpv
-# https://github.com/NikitaIvanovV/ctpv
-set previewer ctpv
-set cleaner ctpvclear
-&ctpv -s $id
-&ctpvquit $id
-
-# sandbox the previews with BubbleWrap TODO
-# set previewer ~/.config/lf/previewSandbox.sh
-
 
 
 
@@ -155,10 +134,6 @@ cmd open &{{
     esac
 }}
 
-
-
-
-
 # Custom command to open file or drop into shell if directory
 cmd open_or_shell ${{
     if [ -d "$f" ]; then
@@ -170,18 +145,13 @@ cmd open_or_shell ${{
     fi
 }}
 # Keybinding to open file or drop into shell
-map o open_or_shell
+map O open_or_shell
 
 # dedicated keys for file opener actions
 map o &mimeopen $f
-map O $mimeopen --ask $f
 
 
-# maps to get mimie type of file and default application
-map zmt % echo $(file --mime-type -b $f)
-map zma % echo $(xdg-mime query default $(file --mime-type -b $f))
-
-# command to show all the desktop entries in /usr/share/applications/ then user selects one and it becomes the default application for the selecte files mime type
+and to show all the desktop entries in /usr/share/applications/ then user selects one and it becomes the default application for the selecte files mime type
 cmd set_default_app ${{
     # get the mime type of the file
     mime_type=$(file --mime-type -b $f)
@@ -201,31 +171,68 @@ cmd set_default_app ${{
 }}
 
 map zmA set_default_app
+# maps to get mimie type of file and default application
+map zmt % echo $(file --mime-type -b $f)
+map zma % echo $(xdg-mime query default $(file --mime-type -b $f))
+
+# Custom command to quit lf
+cmd q ${{
+    lf -remote "send $id quit"
+}}
+
+# ------- Keybindings ------- 
+# Navigation 
+map h updir          # Move up one directory
+map j down           # Move down one file
+map k up             # Move up one file
+map l open           # Open file or directory
+map gg top           # Go to the top of the list
+map G bottom         # Go to the bottom of the list
+
+# File Operations
+map y yank           # Yank (copy) selected files
+map p paste          # Paste yanked files
+# map d delete         # Delete selected files
+map r rename         # Rename selected file
+map d cut            # Cut selected files
+
+# Selection
+map v toggle         # Toggle selection
+map V select-all     # Select all files
+map u unselect-all   # Unselect all files
+
+# Search
+map / search         # Search forward
+map ? search-back    # Search backward
+map n search-next    # Next match
+map N search-prev    # Previous match
+
+# Miscellaneous
+# map q quit           # Quit lf
+# map : command        # Enter command mode
+ map . set hidden!         # Show hidden files
+### -------------- Expeirmental and otherwise screwing around ---------------------------
 
 
-# command to show all the desktop entries in /usr/share/applications/ then user selects one and it becomes the default application for the selecte file
-# cmd set_default_app ${{
-#     desktop_entries=$(ls /usr/share/applications/ | grep .desktop)
-#     selected_entry=$(echo "$desktop_entries" | fzf)
-#     default_app=$(grep -oP "(?<=Exec=).*" /usr/share/applications/$selected_entry | head -n 1)
-#     xdg-mime default $default_app $(file --mime-type -b $f)
-# }}
-#
 # Custom command to display the value of $EDITOR
 # cmd show_editor ${{
 #     echo "EDITOR: $EDITOR"
 #     read
 # }}
- cmd show_editor % echo "EDITOR: $EDITOR"
-# Custom command to display the value of $OPENER
-cmd show_opener ${{
-    echo "OPENER: $OPENER"
-    read
-}}
+# this works:
+# cmd show_editor % echo "EDITOR: $EDITOR"
+# map zE show_editor
+# this does not work:
+# map zO %'echo "OPENER: $OPENER"'
 
+# Custom command to display the value of $OPENER
+# cmd show_opener ${{
+#     echo "OPENER: $OPENER"
+#     read
+# }}
+#
 # Keybinding to show the value of $EDITOR
-map zE show_editor
 
 # Keybinding to show the value of $OPENER
-map zO show_opener
+# map zO show_opener
 
