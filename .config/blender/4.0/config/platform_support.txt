@@ -1,0 +1,5 @@
+{Intel/Mesa Intel(R) Xe Graphics (TGL GT2)/4.6 (Core Profile) Mesa 23.1.9-manjaro1.1}=SUPPORTED
+{Intel/Mesa Intel(R) Xe Graphics (TGL GT2)/4.6 (Core Profile) Mesa 23.3.3-manjaro1.1}=SUPPORTED
+{Intel/Mesa Intel(R) Xe Graphics (TGL GT2)/4.6 (Core Profile) Mesa 23.3.5-manjaro1.1}=SUPPORTED
+{Intel/Mesa Intel(R) Xe Graphics (TGL GT2)/4.6 (Core Profile) Mesa 24.0.2-manjaro1.1}=SUPPORTED
+{Intel/Mesa Intel(R) Xe Graphics (TGL GT2)/4.6 (Core Profile) Mesa 24.0.8-manjaro1.1}=SUPPORTED

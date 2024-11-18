@@ -1,0 +1,104 @@
+Mesh ▸ Snap ▸ Cursor to Selected
+Add (Shift A) ▸ Empty ▸ Circle
+Object ▸ Duplicate Objects|Shift D
+Add (Shift A) ▸ Mesh ▸ Plane
+Edge (Ctrl E) ▸ Loop Cut and Slide|Ctrl R
+Add (Shift A) ▸ Mesh ▸ Circle
+  Plane
+   Material.001
+ 0 Material
+ 0 Material.001
+   tigerlogo
+Add (Shift A) ▸ Curve ▸ Fur
+   tiger-texture
+UV (U) ▸ Unwrap
+UVMap
+Object ▸ Apply (Ctrl A) ▸ Rotation & Scale
+ 0 Texture
+ F Grippy Knurled Metal
+Pie Apply Transforms (Ctrl A) ▸ Apply All
+Select ▸ Select Similar (Shift G) ▸ Vertex Groups
+Shading (Z) ▸ Toggle X-Ray
+main-cyl
+Edge (Ctrl E) ▸ Edge Slide
+Vertex (Ctrl V) ▸ Vertex Groups (Ctrl G) ▸ Assign to New Group
+UV (U) ▸ Mark Seam
+main
+   main pcb
+   chassis mount holes
+Mesh ▸ Snap ▸ Cursor to Active
+  Cube
+Mesh ▸ Separate ▸ Selection|P
+   sensor dummies
+Snap (Shift S) ▸ Cursor to Selected
+Origin Menu (Ctrl Alt X) ▸ Origin to Cursor
+   body mount holes
+  US-PCB
+Edge (Ctrl E) ▸ Mark Sharp
+Edge (Ctrl E) ▸ Subdivide
+   HC-SR04 boolean Subtract
+  main body inner
+  chassis mount hole front
+  body mount hole front
+  body mount hole rear
+  main body inner rear
+  main body inner front
+  LED
+Origin Menu (Ctrl Alt X) ▸ Origin to Bottom
+  main body inner lid volume
+  main body outer
+  fit block LED
+  LED-stretched
+  main body lid fit
+  main body lid fit TOL
+  Cube.002
+  main body outer lid
+Object ▸ Set Origin ▸ Origin to Geometry
+  Cylinder.003
+View ▸ View Regions ▸ Clipping Region...|Alt B
+Mesh ▸ Merge (M) ▸ At Center
+Vertex (Ctrl V) ▸ Connect Vertex Pairs
+  lock bead lid
+  lock bead body
+chassis mount hole front
+  connector
+  chassis fron cut
+  main pcb case
+   chassis mount front
+  chassis front
+   chassis front cut
+   chassis front union
+   chassis rear cut
+   chassis rear union
+   main pcb cutters
+   body rear cut
+   body front cut
+   body rear union
+   body front union
+Render ▸ Render Image|F12
+  Empty
+Objects Operators Submenu ▸ Add Modifier ▸ Subdivision
+Pivot Point (.) ▸ Bounding Box Center
+Mesh ▸ Normals (Alt N) ▸ Recalculate Inside|Shift Ctrl N
+Object ▸ Set Origin ▸ Origin to 3D Cursor
+Quick Favorites (Q) ▸ Origin to Geometry
+  inner volume bottom
+  inner volume top
+Mesh ▸ Merge (M) ▸ By Distance
+View (`) ▸ View Selected
+Pie Proportional Edit (Shift O) ▸ Connected
+Edit options Submenu ▸ Add Modifier ▸ Decimate
+Pie Delete (X) ▸ Merge By Distance
+Edge (Ctrl E) ▸ Bridge Edge Loops
+  cap
+  InnerWall
+  OuterVolume
+  bevel
+  OuterWall
+Mesh ▸ Delete (X) ▸ Collapse Edges & Faces
+
+  Shelf
+Mesh ▸ Clean Up ▸ Merge by Distance
+Mesh ▸ Weights ▸ Normalize All
+Mesh ▸ Normals (Alt N) ▸ Flip
+  MainBody

@@ -5,27 +5,33 @@
 
 # Use neovim for vim if present.
 [ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+[ -x "$(command -v nvim)" ] && alias nano="nvim" vimdiff="nvim -d"
+[ -x "$(command -v nvim)" ] && alias vi="nvim" vimdiff="nvim -d"
 
 # Use $XINITRC variable if file exists.
 [ -f "$XINITRC" ] && alias startx='startx $XINITRC'
 
 # sudo not required for some system commands
-for command in mount umount sv pacman updatedb su shutdown poweroff reboot ; do
-  [ -x "$(command -v $command)" ] && alias $command="sudo $command" 
-done; unset command
+# for command in mount umount sv pacman updatedb su shutdown poweroff reboot ; do
+#     alias "$command"="sudo $command"
+# done; unset command
 
-# verbose and interactive by default 
+# verbose and interactive by default
+# TODO: add rsync move and copy aliases
 alias \
 	cp="cp -iv" \
 	mv="mv -iv" \
 	rm="rm -vI" \
 
+# Always mkdir a path (this doesn't inhibit functionality to make a single dir)
+alias mkdir='mkdir -p'
+
 # video consumption aliases
 alias \
-	yt="yt-dlp" \
-	ytd="yt-dlp --write-description --write-playlist-metafiles --write-info-json --write-thumbnail --write-subs" \
-	ytl="yt-dlp --list-formats" \
-	yta="yt-dlp -x -f bestaudio/best" 
+    yt="yt-dlp" \
+    ytd="yt-dlp --write-description --write-playlist-metafiles --write-info-json --write-thumbnail --write-subs" \
+    ytl="yt-dlp --list-formats" \
+    yta="yt-dlp -x -f bestaudio/best --audio-format mp3" \
 
 # Colorize commands when possible.
 
@@ -45,6 +51,8 @@ alias \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi" \
 	less="less  -FgNwW --use-color"
+
+alias arduino="arduino-ide"
 
 # Quick edit various config/dotfiles
 alias \
@@ -72,3 +80,6 @@ alias conf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # if $DEBUG is set then echo end of aliasrc
 [ -n "$DEBUG" ] && echo "end aliasrc"
+
+
+

@@ -1,0 +1,3 @@
+[submodule ".config/hyprdots"]
+	path = .config/hyprdots
+	url = https://github.com/prasanthrangan/hyprdots.git

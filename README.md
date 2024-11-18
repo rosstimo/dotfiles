@@ -48,3 +48,30 @@ https://news.ycombinator.com/item?id=11071754
 https://www.atlassian.com/git/tutorials/dotfiles
 
 https://youtu.be/tBoLDpTWVOMv
+
+
+## Submodule Notes
+
+### Add Hyprdots as a submodule
+```
+conf submodule add https://github.com/prasanthrangan/hyprdots.git .config/hyprdots
+conf submodule init
+conf submodule update
+conf add .gitmodules .config/hyprdots
+conf commit -m "Add Hyprdots as a submodule"
+conf push
+```
+
+### Create aliases for submodule management
+```
+conf config --global alias.supdate 'submodule update --remote --merge'
+conf config --global alias.spush 'push --recurse-submodules=on-demand'
+conf config --global alias.sdiff '!'"git diff && git submodule foreach 'git diff'"
+``` 
+
+### Use the aliases
+```
+conf supdate
+conf spush
+conf sdiff
+```
